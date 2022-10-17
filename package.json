@@ -1,0 +1,25 @@
+{
+  "name": "kafka-app-svidzger",
+  "version": "1.0.0",
+  "description": "Making producer and consumer clients with kafka and zookeeper.",
+  "main": "index.js",
+  "scripts": {
+    "start:producer": "node ./producer/index.js",
+    "start:consumer": "node ./consumer/index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svidzger/kafka-app-svidzger.git"
+  },
+  "author": "German Svidzinskij",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/svidzger/kafka-app-svidzger/issues"
+  },
+  "homepage": "https://github.com/svidzger/kafka-app-svidzger#readme",
+  "dependencies": {
+    "avsc": "^5.7.6",
+    "node-rdkafka": "^2.13.0"
+  }
+}
