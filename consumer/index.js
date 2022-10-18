@@ -7,7 +7,8 @@ const consumer = Kafka.KafkaConsumer(
     'group.id': 'kafka',
     'metadata.broker.list': 'localhost:9092',
   },
-  {}
+  {},
+  { topic: 'answer' }
 );
 
 consumer.connect();
@@ -18,6 +19,6 @@ consumer
     consumer.subscribe(['task']);
     consumer.consume();
   })
-  .on('data', () => {
-    console.log(`receiver message: ${data.value}`);
+  .on('data', (data) => {
+    console.log(`received message: ${data.value}`);
   });
